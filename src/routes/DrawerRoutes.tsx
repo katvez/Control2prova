@@ -42,9 +42,9 @@ export default function DrawerRoutes() {
 
       <Drawer.Screen name="Home" component={HomeScreen} />
 
-      <Drawer.Screen name="Camisetas" component={EntidadesScreen} />
+      <Drawer.Screen name="Camisetas/Blusas" component={EntidadesScreen} />
 
-      <Drawer.Screen name="Calças" component={ContasPagarScreen} />
+      <Drawer.Screen name="Calças/Shorts" component={ContasPagarScreen} />
 
       <Drawer.Screen name="Sapatos" component={ContasReceberScreen} />
       
