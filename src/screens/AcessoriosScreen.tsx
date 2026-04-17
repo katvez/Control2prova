@@ -1,20 +1,28 @@
 import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 
-export default function CamisetasScreen() {
+export default function AcessoriosScreen() {
   return (
     <ScrollView style={styles.container}>
 
       <View style={styles.header}>
-        <Text style={styles.title}>CAMISETAS</Text>
+        <Text style={styles.title}>ACESSÓRIOS</Text>
         <Text style={styles.subtitle}>dark • underground • expression</Text>
       </View>
 
-      {/* ROW COM PREÇO ABAIXO */}
+      {/* IMAGENS EM LINHA COM PREÇO ABAIXO */}
       <View style={styles.row}>
 
         <View style={styles.item}>
           <Image
-            source={{ uri: "https://i.pinimg.com/1200x/c7/2e/da/c72eda6314679aaa6a27885c9fb44da4.jpg" }}
+            source={{ uri: "https://i.pinimg.com/736x/6e/bf/5e/6ebf5efcca789fc61066ced9cd6f8519.jpg" }}
+            style={styles.image}
+          />
+          <Text style={styles.price}>R$ 49,90</Text>
+        </View>
+
+        <View style={styles.item}>
+          <Image
+            source={{ uri: "https://i.pinimg.com/736x/4b/21/b9/4b21b964cab33c7e57b718d14cad5015.jpg" }}
             style={styles.image}
           />
           <Text style={styles.price}>R$ 59,90</Text>
@@ -22,7 +30,15 @@ export default function CamisetasScreen() {
 
         <View style={styles.item}>
           <Image
-            source={{ uri: "https://i.pinimg.com/1200x/28/a2/9f/28a29f12313e6dc68488e839f3a0391a.jpg" }}
+            source={{ uri: "https://i.pinimg.com/736x/91/93/af/9193afdf6e4d68dcea61192ee61e0544.jpg" }}
+            style={styles.image}
+          />
+          <Text style={styles.price}>R$ 90,00</Text>
+        </View>
+
+        <View style={styles.item}>
+          <Image
+            source={{ uri: "https://i.pinimg.com/736x/9d/c4/0c/9dc40cdb1885f7c34c7c6cb84a44bdcc.jpg" }}
             style={styles.image}
           />
           <Text style={styles.price}>R$ 69,90</Text>
@@ -30,34 +46,18 @@ export default function CamisetasScreen() {
 
         <View style={styles.item}>
           <Image
-            source={{ uri: "https://i.pinimg.com/736x/8a/92/8c/8a928c2667d0f9025e5c8f1b1cf13db3.jpg" }}
+            source={{ uri: "https://i.pinimg.com/736x/27/db/0a/27db0a76021dfdebecf8a7ee197ea21a.jpg" }}
             style={styles.image}
           />
-          <Text style={styles.price}>R$ 79,90</Text>
+          <Text style={styles.price}>R$ 30,90</Text>
         </View>
 
         <View style={styles.item}>
           <Image
-            source={{ uri: "https://i.pinimg.com/736x/8c/68/1a/8c681a75dd25ef212ca4bc17644f6030.jpg" }}
+            source={{ uri: "https://i.pinimg.com/736x/37/ee/0a/37ee0ac633219e43419bbfea2830d2b0.jpg" }}
             style={styles.image}
           />
           <Text style={styles.price}>R$ 89,90</Text>
-        </View>
-
-        <View style={styles.item}>
-          <Image
-            source={{ uri: "https://i.pinimg.com/736x/41/ac/5b/41ac5b89f330fb8b8aa06000da69d202.jpg" }}
-            style={styles.image}
-          />
-          <Text style={styles.price}>R$ 71,90</Text>
-        </View>
-
-        <View style={styles.item}>
-          <Image
-            source={{ uri: "https://i.pinimg.com/1200x/27/72/a5/2772a52226ec6732d5faf2244931a097.jpg" }}
-            style={styles.image}
-          />
-          <Text style={styles.price}>R$ 60,00</Text>
         </View>
 
       </View>

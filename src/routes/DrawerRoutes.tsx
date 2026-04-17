@@ -4,6 +4,8 @@ import HomeScreen from "../screens/HomeScreen";
 import EntidadesScreen from "../screens/CamisetasScreen";
 import ContasPagarScreen from "../screens/CalcasScreen";
 import ContasReceberScreen from "../screens/SapatosScreen";
+import AcessoriosScreen from "../screens/AcessoriosScreen";
+import AboutScreen from "../screens/AboutScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -47,6 +49,10 @@ export default function DrawerRoutes() {
       <Drawer.Screen name="Calças/Shorts" component={ContasPagarScreen} />
 
       <Drawer.Screen name="Sapatos" component={ContasReceberScreen} />
+
+      <Drawer.Screen name="Acessórios" component={AcessoriosScreen} />
+
+      <Drawer.Screen name="Sobre" component={AboutScreen} />
       
     </Drawer.Navigator>
   );

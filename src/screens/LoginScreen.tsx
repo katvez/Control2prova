@@ -1,99 +1,116 @@
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function LoginScreen({navigation}: any) {
-
-    return(
-        <View style={styles.container}>
-            <View style={styles.center}>
-                <Text style={styles.tittle}>Control</Text>
-                <TextInput
-                placeholder="E-mail"
-                style={styles.input}/>
-
-                <TextInput
-                placeholder="Senha"
-                secureTextEntry
-                style={styles.input}/>
-
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Entrar</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                onPress={() => navigation.navigate("Cadastro")}>
-                    <Text style={styles.link}>
-                        Não tem uma conta? Criar conta
-                    </Text>
-                </TouchableOpacity>
-                </View>
-
-                <TouchableOpacity
-                style={styles.aboutButton}
-                onPress={() => navigation.navigate("Sobre")}>
-                    <Text style={styles.aboutText}>Sobre o aplicativo</Text>
-                </TouchableOpacity>
-                
-        </View>
-    );
-    }
-
-    const styles = StyleSheet.create({ 
-
-        container: {
-            flex: 1,
-            backgroundColor: "#fff",
-            padding: 20
-        },
-
-        center: {
-            flex: 1,
-            justifyContent: "center"
-        },
-
-        tittle: {
-            fontSize: 32,
-            fontWeight: "bold",
-            marginBottom: 40,
-            textAlign: "center"
-        },
-
-        input:{
-
+export default function LoginScreen({ navigation }: any) {
+  return (
+    <View style={styles.container}>
       
-        borderWidth: 1,
-        borderColor: "#ccc",
-        borderRadius: 8,
-        padding: 12,
-        marginBottom: 15
-          },
+      <View style={styles.center}>
+        
+        {/* Logo / Marca */}
+        <Text style={styles.logo}>VOID</Text>
+        <Text style={styles.subtitle}>alt • gothic • emo</Text>
 
-          button:{
-            backgroundColor:"#1e88e5",
-            padding: 15,
-            borderRadius: 8,
-            alignItems: "center",
-          },
+        {/* Inputs */}
+        <TextInput
+          placeholder="E-mail"
+          placeholderTextColor="#777"
+          style={styles.input}
+        />
 
-          buttonText: {
-            color: "#fff",
-            fontWeight: "bold"
-          },
+        <TextInput
+          placeholder="Senha"
+          placeholderTextColor="#777"
+          secureTextEntry
+          style={styles.input}
+        />
 
-          link: {
-            marginTop: 15,
-            textAlign: "center",
-            color: "#1E88E5",
-          },
+        {/* Botão */}
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Entrar</Text>
+        </TouchableOpacity>
 
-          aboutButton: {
-            alignItems: "center",
-            marginBottom: 20,
-          },
+        {/* Link cadastro */}
+        <TouchableOpacity onPress={() => navigation.navigate("Cadastro")}>
+          <Text style={styles.link}>
+            Não tem uma conta? Criar conta
+          </Text>
+        </TouchableOpacity>
 
-          aboutText: {
-            color:"#999",
-            fontSize: 14,
-          },
+      </View>
 
-    })
+      {/* Sobre */}
+      <TouchableOpacity
+        style={styles.aboutButton}
+        onPress={() => navigation.navigate("Sobre")}
+      >
+        <Text style={styles.aboutText}>Sobre o aplicativo</Text>
+      </TouchableOpacity>
 
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#0a0a0a",
+    padding: 20,
+  },
+
+  center: {
+    flex: 1,
+    justifyContent: "center",
+  },
+
+  logo: {
+    color: "#a020f0",
+    fontSize: 36,
+    fontWeight: "bold",
+    letterSpacing: 4,
+    textAlign: "center",
+  },
+
+  subtitle: {
+    color: "#777",
+    textAlign: "center",
+    marginBottom: 30,
+    marginTop: 5,
+  },
+
+  input: {
+    backgroundColor: "#1a1a1a",
+    color: "#fff",
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 15,
+  },
+
+  button: {
+    marginTop: 10,
+    backgroundColor: "#a020f0",
+    padding: 14,
+    borderRadius: 25,
+    alignItems: "center",
+  },
+
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
+  },
+
+  link: {
+    marginTop: 15,
+    textAlign: "center",
+    color: "#a020f0",
+  },
+
+  aboutButton: {
+    alignItems: "center",
+    marginBottom: 20,
+  },
+
+  aboutText: {
+    color: "#777",
+    fontSize: 14,
+  },
+});
